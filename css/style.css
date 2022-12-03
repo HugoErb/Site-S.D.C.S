@@ -323,9 +323,9 @@ a {
   font-weight: 600;
   letter-spacing: 4px;
   text-transform: uppercase;
-  padding: 14px 46px;
   transition: all 0.4s ease-in-out;
   margin-top: 32px;
+  max-width: 100%;
 }
 
 #overview .btn:hover {
@@ -419,7 +419,7 @@ a {
 -----------------------------------------*/
 #adhesion {
   background: linear-gradient(rgba(0, 0, 0, 0.8),
-      rgba(0, 0, 0, 0.8)), url('../images/bg.jpg') 50% 0 repeat-y fixed;
+      rgba(0, 0, 0, 0.8)), url('../images/bg.png') 50% 0 repeat-y fixed;
   -webkit-background-size: cover;
   background-size: cover;
   background-position: center center;
@@ -611,7 +611,7 @@ a {
 -----------------------------------------*/
 #contact {
   background: linear-gradient(rgba(0, 0, 0, 0.8),
-      rgba(0, 0, 0, 0.8)), url('../images/bg.jpg') 50% 0 repeat-y fixed;
+      rgba(0, 0, 0, 0.8)), url('../images/bg.png') 50% 0 repeat-y fixed;
   background-size: cover;
   background-position: center center;
   color: #ffffff;
@@ -836,6 +836,7 @@ span {
 
   #overview .overview-detail .btn {
     margin-left: 45px;
+    padding: 14px 46px;
   }
 
 }
@@ -970,6 +971,10 @@ span {
     left: 0px;
     padding-top: 30px;
     padding-bottom: 30px;
+  }
+
+  #overview .overview-detail .btn {
+    padding: 14px 30px;
   }
 
 }
