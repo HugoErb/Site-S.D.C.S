@@ -206,7 +206,7 @@ a {
 
 .navbar-default .navbar-toggle {
   border: none;
-  padding-top: 10px;
+  padding-top: 11px;
 }
 
 .navbar-default .navbar-toggle .icon-bar {
@@ -224,6 +224,14 @@ a {
   width: 60px;
   float: left;
   margin-right: 15px;
+}
+
+.navbar-default .navbar-toggle .icon-bar{
+  background-color : #4d4d4d !important;
+}
+
+.navbar-toggle .icon-bar+.icon-bar {
+  margin-top: 5px;
 }
 
 /*---------------------------------------
@@ -847,6 +855,16 @@ span {
 
   #calendar-header {
     height: 40vh;
+  }
+
+  #logo_nav{
+    width: 35px;
+    margin-top: -10px;
+  }
+
+  .navbar-brand{
+    font-size: 2.5em !important;
+    margin-top: 5px !important;
   }
 
 }
