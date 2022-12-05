@@ -41,7 +41,6 @@ h2 {
 }
 
 #team h2,
-#contact h2,
 #calendar h2,
 #inscription h2 {
   padding-bottom: 2px;
@@ -89,7 +88,6 @@ a {
 
 #home,
 #team,
-#contact,
 #inscription,
 #testimonial,
 #calendar-header {
