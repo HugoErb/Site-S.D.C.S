@@ -43,7 +43,7 @@ h2 {
 #team h2,
 #contact h2,
 #calendar h2,
-#adhesion h2 {
+#inscription h2 {
   padding-bottom: 2px;
   margin-top: -10px;
 }
@@ -82,7 +82,7 @@ a {
 -----------------------------------------*/
 #team,
 #calendar,
-#adhesion {
+#inscription {
   padding-top: 10rem;
   padding-bottom: 10rem;
 }
@@ -90,7 +90,7 @@ a {
 #home,
 #team,
 #contact,
-#adhesion,
+#inscription,
 #testimonial,
 #calendar-header {
   text-align: center;
@@ -417,7 +417,7 @@ a {
 /*---------------------------------------
     Adhésion section              
 -----------------------------------------*/
-#adhesion {
+#inscription {
   background: linear-gradient(rgba(0, 0, 0, 0.8),
       rgba(0, 0, 0, 0.8)), url('../images/bg.png') 50% 0 repeat-y fixed;
   -webkit-background-size: cover;
@@ -426,11 +426,11 @@ a {
   color: #ffffff;
 }
 
-#adhesion p {
+#inscription p {
   color: #b1b1b1;
 }
 
-#adhesion .adhesion__item {
+#inscription .inscription__item {
   position: relative;
   display: -webkit-flex;
   display: flex;
@@ -443,7 +443,7 @@ a {
   flex: 0 1 330px;
 }
 
-#adhesion .adhesion__item {
+#inscription .inscription__item {
   font-size: 20px;
   margin-top: 72px;
   padding: 2em;
@@ -454,25 +454,25 @@ a {
   transition: background-color 0.6s, color 0.3s;
 }
 
-#adhesion .adhesion__item:nth-child(2) {
+#inscription .inscription__item:nth-child(2) {
   border-right: none;
   border-left: none;
 }
 
-#adhesion .adhesion__item:hover {
+#inscription .inscription__item:hover {
   color: #444;
   background: #ffffff;
   border-color: transparent;
 }
 
-#adhesion .adhesion__title {
+#inscription .inscription__title {
   font-size: 2em;
   width: 100%;
   margin: 0;
   padding: 0;
 }
 
-#adhesion .adhesion__feature-list {
+#inscription .inscription__feature-list {
   margin: 0;
   padding: 1em 1em 2em 1em;
   font-weight: bold;
@@ -482,7 +482,7 @@ a {
   text-align: center;
 }
 
-#adhesion .adhesion__action {
+#inscription .inscription__action {
   border: none;
   font-weight: bold;
   margin-top: auto;
@@ -499,28 +499,28 @@ a {
   transform: translate3d(0, -15px, 0);
 }
 
-#adhesion .adhesion__action:focus {
+#inscription .inscription__action:focus {
   outline: none;
 }
 
-#adhesion .adhesion__item:hover .adhesion__action {
+#inscription .inscription__item:hover .inscription__action {
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
 
-#adhesion p a {
+#inscription p a {
   color: #FF512F;
 }
 
 @media screen and (max-width: 60em) {
-  #adhesion .adhesion__item {
+  #inscription .inscription__item {
     max-width: none;
     width: 100%;
     flex: none;
   }
 
-  #adhesion .adhesion__item:nth-child(2) {
+  #inscription .inscription__item:nth-child(2) {
     border: 1px solid #fff;
   }
 }
@@ -906,7 +906,7 @@ span {
 
   #team,
   #calendar,
-  #adhesion {
+  #inscription {
     padding-top: 6rem;
     padding-bottom: 6rem;
   }
@@ -959,7 +959,7 @@ span {
     top: 0px;
   }
 
-  #adhesion .adhesion__action {
+  #inscription .inscription__action {
     font-size: 13px;
   }
 
