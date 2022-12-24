@@ -573,7 +573,7 @@ a {
 }
 
 #calendar .calendar-thumb:hover .calendar-date,
-#calendar .calendar-thumb:hover #calendar-author {
+#calendar .calendar-thumb:hover .calendar-comment {
   color: #ffffff;
 }
 
@@ -592,7 +592,7 @@ a {
   font-weight: bold;
 }
 
-#calendar #calendar-author {
+#calendar .calendar-comment {
   color: #606060;
   letter-spacing: 1px;
 }
