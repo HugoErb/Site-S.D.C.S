@@ -1,16 +1,22 @@
 import re
+import subprocess
 
+nbCadreCalendrier = 4
 events = []
 calendar_sentences = ["haut à gauche","haut à droite","bas à gauche","bas à droite"]
+calendar_div_ids = ["case_haut_gauche", "case_haut_droite", "case_bas_gauche", "case_bas_droite"]
 
-for i in range(4):
+# Pull le projet
+subprocess.run(["git", "pull"])
+
+for i in range(nbCadreCalendrier):
   print("-----------------------------------------------------")
   print("Informations de la case en " + calendar_sentences[i] + ".")
   print("-----------------------------------------------------")
-  date = input("Veuillez entrer une date (au format jj/mm/aaaa) : ")
+  date = input("Veuillez entrer une date : ")
   while not date:
     print("La date est obligatoire.")
-    date = input("Veuillez entrer une date (au format jj/mm/aaaa) : ")
+    date = input("Veuillez entrer une date : ")
 
   lieu = input("Veuillez entrer un lieu : ")
   while not lieu:
@@ -34,16 +40,24 @@ for i in range(4):
   event = {"date": date, "lieu": lieu, "titre": titre, "commentaire": commentaire}
   events.append(event)
 
-# Ouvrez le fichier HTML et lisez-le en tant que chaîne de caractères
+# Ouverture du fichier HTML et lecture de ce dernier en tant que chaîne de caractères
 with open("index.html", "r") as f:
-    html = f.read()
+  html = f.read()
 
-# Remplacez le contenu de la balise ayant l'ID "mon_id" par la valeur de votre variable
-html_modifie = re.sub('<div[^>]*id="case_haut_gauche"[^>]*>.*</div>', f'<div class="calendar-thumb" id="case_haut_gauche"><span class="calendar-date">{events[0]["date"]}<br>{events[0]["lieu"]}</span><h3 class="calendar-title">{events[0]["titre"]}</h3><h5 class="calendar-comment">{events[0]["commentaire"]}</h5></div>', html)
+# Itération sur chaque élément de la liste events
+for i in range(nbCadreCalendrier):
+  # Remplacement du contenu des balises
+  nouvelle_balise = f'<div class="calendar-thumb" id="{calendar_div_ids[i]}"><span class="calendar-date">{events[i]["date"]}<br>{events[i]["lieu"]}</span><h3 class="calendar-title">{events[i]["titre"]}</h3><h5 class="calendar-comment">{events[i]["commentaire"]}</h5></div>'
+  html = re.sub(f'<div class=\"calendar-thumb\" id=\"case_haut_gauche\">.*</div>', nouvelle_balise, html)
 
-# Enregistrez le fichier HTML modifié
+# Enregistrement du fichier HTML modifié
 with open("index.html", "w") as f:
-    f.write(html_modifie)
+    f.write(html)
+
+# Commit et push les modifications
+# subprocess.run(["git", "add", "."])
+# subprocess.run(["git", "commit", "-m", "Commit automatique de màj du calendrier"])
+# subprocess.run(["git", "push"])
 
 print("Les informations ont été envoyées à votre site internet.") 
 print("Il devrait être mis à jour dans peu de temps.")
