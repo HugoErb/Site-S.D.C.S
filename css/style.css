@@ -418,7 +418,7 @@ a {
 -----------------------------------------*/
 #inscription {
   background: linear-gradient(rgba(0, 0, 0, 0.8),
-      rgba(0, 0, 0, 0.8)), url('../images/bg.png') 50% 0 repeat-y fixed;
+      rgba(0, 0, 0, 0.8)), url('../images/bg.jpg') 50% 0 repeat-y fixed;
   -webkit-background-size: cover;
   background-size: cover;
   background-position: center center;
@@ -546,7 +546,7 @@ a {
 #case_haut_gauche:hover {
   background: linear-gradient(to right,
       rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7),
-      rgba(0, 0, 0, 0.0)), url('../images/agression.png') 50% 0 repeat-y fixed;
+      rgba(0, 0, 0, 0.0)), url('../images/agression.jpg') 50% 0 repeat-y fixed;
 }
 
 #case_haut_droite:hover {
@@ -564,7 +564,7 @@ a {
 #case_bas_droite:hover {
   background: linear-gradient(to right,
       rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7),
-      rgba(0, 0, 0, 0.0)), url('../images/agression.png') 50% 0 repeat-y fixed;
+      rgba(0, 0, 0, 0.0)), url('../images/agression.jpg') 50% 0 repeat-y fixed;
 }
 
 #calendar .calendar-thumb:hover .calendar-title {
