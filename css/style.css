@@ -331,7 +331,9 @@ a {
   color: #ffffff;
 }
 
-
+#overview a {
+  color: #FF512F;
+}
 
 /*---------------------------------------
    Team section              
@@ -552,19 +554,19 @@ a {
 #case_haut_droite:hover {
   background: linear-gradient(to right,
       rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7),
-      rgba(0, 0, 0, 0.0)), url('../images/forest.jpg') 50% 0 repeat-y fixed;
+      rgba(0, 0, 0, 0.0)), url('../images/agression.jpg') 50% 0 repeat-y fixed;
 }
 
 #case_bas_gauche:hover {
   background: linear-gradient(to right,
       rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7),
-      rgba(0, 0, 0, 0.0)), url('../images/forest.jpg') 50% 0 repeat-y fixed;
+      rgba(0, 0, 0, 0.0)), url('../images/boxe.jpg') 50% 0 repeat-y fixed;
 }
 
 #case_bas_droite:hover {
   background: linear-gradient(to right,
       rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7),
-      rgba(0, 0, 0, 0.0)), url('../images/agression.jpg') 50% 0 repeat-y fixed;
+      rgba(0, 0, 0, 0.0)), url('../images/forest.jpg') 50% 0 repeat-y fixed;
 }
 
 #calendar .calendar-thumb:hover .calendar-title {
