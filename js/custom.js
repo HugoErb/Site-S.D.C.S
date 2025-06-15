@@ -104,7 +104,8 @@ $(document).ready(function () {
 
   /* wow
   -------------------------------*/
-  new WOW({ mobile: false }).init();
+  new WOW({ mobile: false,
+    offset: 50 }).init();
 
 });
 
