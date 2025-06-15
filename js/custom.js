@@ -12,9 +12,10 @@ $(document).ready(function () {
 
   /* template navigation
   -----------------------------------------------*/
+  var navHeight = $('.navbar-fixed-top').outerHeight();
   $('.main-navigation').onePageNav({
-    scrollThreshold: 0.2, // Adjust if Navigation highlights too early or too late
-    scrollOffset: 75, //Height of Navigation Bar
+    scrollThreshold: 0.2,
+    scrollOffset: navHeight,
     filter: ':not(.external)',
     changeHash: true
   });
