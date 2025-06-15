@@ -363,6 +363,9 @@ a {
     width: 90%;
     border-radius: 4px;
     margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   .team-info {
@@ -802,10 +805,6 @@ span {
 	#overview .overview-detail {
 		margin-top: 100px;
 		top: 0px;
-	}
-
-	#inscription .inscription__action {
-		font-size: 13px;
 	}
 
 	footer {
