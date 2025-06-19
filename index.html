@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 	<head>
+		<meta charset="UTF-8" />
 		<!-- Google tag (gtag.js) -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-J379F8XJM8"></script>
 		<script>
@@ -19,9 +20,8 @@
 			content="Site de la S.D.C.S : SELF . DÉFENSE . COMBAT . SECOURS. Une association conçue pour répondre aux modes d’agression qui évoluent et
         évolueront sans cesse. Elle a pour finalité de toucher un public qui ne recherche pas forcément la compétition, mais une pratique complète."
 		/>
-		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="icon" type="image/x-icon" href="./images/logo.png" />
 
 		<link rel="stylesheet" href="css/bootstrap.min.css" />
@@ -33,7 +33,19 @@
 		<!-- Main css -->
 		<link rel="stylesheet" href="css/style.css" />
 
+		<!-- Balises Open Graph (OG) pour un meilleur partage sur les réseaux sociaux -->
+		<meta property="og:title" content="SELF.DÉFENSE.COMBAT.SECOURS" />
+		<meta
+			property="og:description"
+			content="Site de la S.D.C.S : Une association conçue pour répondre aux modes d’agression qui évoluent. Pratique complète sans compétition."
+		/>
+		<meta property="og:image" content="https://tonsite.fr/images/og-image.jpg" />
+		<meta property="og:url" content="https://tonsite.fr" />
+		<meta property="og:type" content="website" />
+
 		<!-- Google Font -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600" rel="stylesheet" type="text/css" />
 		<link href="https://fonts.googleapis.com/css?family=Lora:700italic" rel="stylesheet" type="text/css" />
 	</head>
@@ -423,14 +435,19 @@
 		<!-- =========================
      SCRIPTS   
 ============================== -->
+		<!-- Dépendances principales -->
 		<script src="js/jquery.js"></script>
 		<script src="js/bootstrap.min.js"></script>
-		<script src="js/jquery.parallax.js"></script>
-		<script src="js/jquery.nav.js"></script>
+
+		<!-- Plugins dépendant de jQuery -->
 		<script src="js/jquery.backstretch.min.js"></script>
+		<script src="js/jquery.nav.js"></script>
+		<script src="js/jquery.parallax.js"></script>
 		<script src="js/owl.carousel.min.js"></script>
 		<script src="js/smoothscroll.js"></script>
 		<script src="js/wow.min.js"></script>
+
+		<!-- Script principal, toujours en dernier -->
 		<script src="js/custom.js"></script>
 	</body>
 </html>
