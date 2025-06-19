@@ -224,6 +224,7 @@ a {
 
 #logo_nav {
 	width: 60px;
+    height: 60px;
 	float: left;
 	margin-right: 15px;
 }
@@ -258,7 +259,12 @@ a {
 
 #logo {
 	width: 25%;
+	height: 25%;
 	margin-bottom: -30px;
+}
+
+#home p{
+    color: #aaaaaa;
 }
 
 #home h3 {
@@ -724,7 +730,13 @@ span {
 
 	#logo_nav {
 		width: 35px;
+		height: 35px;
 		margin-top: -10px;
+	}
+
+    #logo {
+		width: 150px;
+		height: 150px;
 	}
 
 	.navbar-brand {
