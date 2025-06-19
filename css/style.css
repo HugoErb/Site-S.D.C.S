@@ -413,6 +413,8 @@ a {
     letter-spacing: 2px;
     transition: background 0.3s, color 0.3s;
     align-self: start;
+    width: 70%;
+    margin: auto;
   }
   
   .team__action:hover {
@@ -743,6 +745,10 @@ span {
 		font-size: 2.5em !important;
 		margin-top: 5px !important;
 	}
+
+    .team__action {
+        width: 100%;
+    }
 }
 
 @media (max-width: 768px) {
