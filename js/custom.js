@@ -12,9 +12,10 @@ $(document).ready(function () {
 
   /* template navigation
   -----------------------------------------------*/
+  var navHeight = $('.navbar-fixed-top').outerHeight();
   $('.main-navigation').onePageNav({
-    scrollThreshold: 0.2, // Adjust if Navigation highlights too early or too late
-    scrollOffset: 75, //Height of Navigation Bar
+    scrollThreshold: 0.2,
+    scrollOffset: navHeight,
     filter: ':not(.external)',
     changeHash: true
   });
@@ -75,15 +76,31 @@ $(document).ready(function () {
 
   /* home slider section
  -----------------------------------------------*/
-  $(function () {
-    jQuery(document).ready(function () {
-      $('#home').backstretch([
-        "images/home-bg-slider-img1.jpg",
-        "images/home-bg-slider-img2.jpg",
-        "images/home-bg-slider-img3.jpg",
-      ], { duration: 5000, fade: 750 });
+ $(function () {
+    const imagePaths = [
+      "images/home-bg-slider-img1.jpg",
+      "images/home-bg-slider-img2.jpg",
+      "images/home-bg-slider-img3.jpg"
+    ];
+  
+    const imageAlts = imagePaths.map(path => {
+      const fileName = path.split('/').pop();
+      return fileName.replace(/\.[^/.]+$/, ''); // supprime l'extension
     });
-  })
+  
+    $('#home').backstretch(imagePaths, {
+      duration: 5000,
+      fade: 750,
+      before: function (index, $img) {
+        // Si une image est déjà dans le DOM, modifie son alt
+        $(".backstretch img").attr("alt", imageAlts[index]);
+      },
+      after: function () {
+        // S'assurer que l'alt est bien appliqué à la première image
+        $(".backstretch img").attr("alt", imageAlts[0]);
+      }
+    });
+  });
 
 
   /* Owl Carousel
@@ -103,7 +120,8 @@ $(document).ready(function () {
 
   /* wow
   -------------------------------*/
-  new WOW({ mobile: false }).init();
+  new WOW({ mobile: false,
+    offset: 50 }).init();
 
 });
 
