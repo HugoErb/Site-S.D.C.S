@@ -1,4 +1,11 @@
 
+/* jQuery Pre loader
+ -----------------------------------------------*/
+$(window).load(function () {
+  $('.preloader').fadeOut(1000); // set duration in brackets
+});
+
+
 /* HTML document is loaded. DOM is ready. 
 -------------------------------------------*/
 $(document).ready(function () {
@@ -69,7 +76,7 @@ $(document).ready(function () {
 
   /* home slider section
  -----------------------------------------------*/
-  $(window).on('load', function () {
+  $(function () {
     const imagePaths = [
       "images/home-bg-slider-img1-1920.webp",
       "images/home-bg-slider-img2-1920.webp",
@@ -82,11 +89,9 @@ $(document).ready(function () {
       "Participants à une séance de préparation physique"
     ];
   
-    const displayedImages = window.matchMedia('(max-width: 767px)').matches ? imagePaths.slice(0, 1) : imagePaths;
-
     $('#home').on('backstretch.after', function (event, instance, index) {
       $(this).find('.backstretch img').attr('alt', imageAlts[index]);
-    }).backstretch(displayedImages, {
+    }).backstretch(imagePaths, {
       duration: 5000,
       fade: 750
     });
