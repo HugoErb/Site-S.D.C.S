@@ -2,17 +2,6 @@
 <html lang="fr">
 	<head>
 		<meta charset="UTF-8" />
-		<!-- Google tag (gtag.js) -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-J379F8XJM8"></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag() {
-				dataLayer.push(arguments);
-			}
-			gtag("js", new Date());
-
-			gtag("config", "G-J379F8XJM8");
-		</script>
 		<title>S.D.C.S | Self-défense, combat et secours</title>
 		<meta name="author" content="ERIBON Hugo" />
 		<meta
@@ -26,12 +15,13 @@
 		<link rel="icon" type="image/webp" href="./images/logo.webp" />
 
 		<link rel="stylesheet" href="css/bootstrap.min.css" />
-		<link rel="stylesheet" href="css/animate.css" />
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-		<link rel="stylesheet" href="css/owl.carousel.css" />
-
-		<!-- Main css -->
 		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/animate.css" media="print" onload="this.media='all'" />
+		<link rel="stylesheet" href="css/owl.carousel.css" media="print" onload="this.media='all'" />
+		<noscript>
+			<link rel="stylesheet" href="css/animate.css" />
+			<link rel="stylesheet" href="css/owl.carousel.css" />
+		</noscript>
 
 		<!-- Balises Open Graph (OG) pour un meilleur partage sur les réseaux sociaux -->
 		<meta property="og:title" content="S.D.C.S | Self-défense, combat et secourisme" />
@@ -97,32 +87,42 @@
 		<!-- Google Font -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600" rel="stylesheet" type="text/css" />
-		<link href="https://fonts.googleapis.com/css?family=Lora:700italic" rel="stylesheet" type="text/css" />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,700&amp;family=Source+Sans+Pro:wght@300;400;600&amp;display=swap"
+			media="print"
+			onload="this.media='all'"
+		/>
+		<noscript>
+			<link
+				rel="stylesheet"
+				href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,700&amp;family=Source+Sans+Pro:wght@300;400;600&amp;display=swap"
+			/>
+		</noscript>
 	</head>
 
 	<body data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
 		<!-- =========================
-     PRE LOADER       
-============================== -->
-		<div class="preloader">
-			<div class="sk-spinner sk-spinner-pulse"></div>
-		</div>
-
-		<!-- =========================
     NAVIGATION SECTION   
 ============================== -->
-		<div class="navbar navbar-default navbar-fixed-top sticky-navigation" role="navigation">
+		<nav class="navbar navbar-default navbar-fixed-top sticky-navigation" aria-label="Navigation principale">
 			<div class="container">
 				<div class="navbar-header">
-					<div class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<button
+						type="button"
+						class="navbar-toggle collapsed"
+						data-toggle="collapse"
+						data-target=".navbar-collapse"
+						aria-expanded="false"
+						aria-label="Afficher le menu principal"
+					>
 						<span class="icon icon-bar"></span>
 						<span class="icon icon-bar"></span>
 						<span class="icon icon-bar"></span>
-					</div>
+					</button>
 					<!-- prettier-ignore -->
 					<a href="#home" class="navbar-brand">
-						<img id="logo_nav" src="images/logo.webp" height="60" width="60" alt="Logo S.D.C.S" />
+						<img id="logo_nav" src="images/logo-192.webp" height="60" width="60" alt="Logo S.D.C.S" />
 						S<span>.</span>D<span>.</span>C<span>.</span>S</a>
 				</div>
 				<div class="collapse navbar-collapse">
@@ -136,7 +136,7 @@
 					</ul>
 				</div>
 			</div>
-		</div>
+		</nav>
 
 		<!-- =========================
     HOME SECTION   
@@ -145,16 +145,25 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-offset-1 col-md-10 col-sm-12">
-						<img class="wow fadeInUp" width="236" height="236" id="logo" src="images/logo.webp" alt="Logo S.D.C.S" />
+						<img
+							width="236"
+							height="236"
+							id="logo"
+							src="images/logo-280.webp"
+							srcset="images/logo-192.webp 192w, images/logo-280.webp 280w, images/logo.webp 898w"
+							sizes="(max-width: 767px) 150px, 236px"
+							fetchpriority="high"
+							alt="Logo S.D.C.S"
+						/>
 						<!-- prettier-ignore -->
-						<h1 class="wow fadeInUp" data-wow-delay="0.2s">
+						<h1>
 							S<span>.</span>D<span>.</span>C<span>.</span>S
 						</h1>
 						<!-- prettier-ignore -->
-						<p class="wow fadeInUp bold" height="250px" width="250px" data-wow-delay="0.4s">
+						<p class="bold">
 							SELF<span>.</span>DÉFENSE<span>.</span>COMBAT<span>.</span>SECOURS
 						</p>
-						<a href="#overview" class="wow fadeInUp smoothScroll btn btn-default" data-wow-delay="0.6s">EN SAVOIR PLUS</a>
+						<a href="#overview" class="smoothScroll btn btn-default">EN SAVOIR PLUS</a>
 					</div>
 				</div>
 			</div>
@@ -168,8 +177,11 @@
 				<div class="row">
 					<div class="col-md-6 col-sm-12">
 						<img
-							src="images/fight.jpg"
+							src="images/fight-600.webp"
+							srcset="images/fight-360.webp 360w, images/fight-600.webp 600w"
+							sizes="(max-width: 991px) 100vw, 555px"
 							loading="lazy"
+							decoding="async"
 							width="555"
 							height="430"
 							class="img-responsive"
@@ -232,10 +244,13 @@
 						<div class="team-profile row">
 							<div class="col-md-6">
 								<img
-									src="images/trainer-img1.jpg"
+									src="images/trainer-img1-360.webp"
+									srcset="images/trainer-img1-360.webp 360w, images/trainer-img1-600.webp 599w"
+									sizes="(max-width: 767px) 90vw, 412px"
 									loading="lazy"
-									height="550px"
-									width="412px"
+									decoding="async"
+									height="550"
+									width="412"
 									class="img-responsive team-img"
 									alt="Christophe ERIBON"
 								/>
@@ -394,7 +409,12 @@
 			================================================== -->
 					<div id="owl-testimonial" class="owl-carousel">
 						<div class="item col-md-offset-2 col-md-8 col-sm-offset-1 col-sm-10 wow fadeInUp" data-wow-delay="0.2s">
-							<i class="fa fa-quote-left"></i>
+							<!-- Icônes Font Awesome Free 6.7.2 sous licence CC BY 4.0 : https://fontawesome.com/license/free -->
+							<svg class="testimonial-icon" viewBox="0 0 448 512" aria-hidden="true" focusable="false">
+								<path
+									d="M0 216C0 149.7 53.7 96 120 96l8 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-8 0c-30.9 0-56 25.1-56 56l0 8 64 0c35.3 0 64 28.7 64 64l0 64c0 35.3-28.7 64-64 64l-64 0c-35.3 0-64-28.7-64-64l0-32 0-32 0-72zm256 0c0-66.3 53.7-120 120-120l8 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-8 0c-30.9 0-56 25.1-56 56l0 8 64 0c35.3 0 64 28.7 64 64l0 64c0 35.3-28.7 64-64 64l-64 0c-35.3 0-64-28.7-64-64l0-32 0-32 0-72z"
+								/>
+							</svg>
 							<h3>Sincérité, exigence, pragmatisme.</h3>
 							<!-- prettier-ignore -->
 							<h4>
@@ -402,7 +422,11 @@
 							</h4>
 						</div>
 						<div class="item col-md-offset-2 col-md-8 col-sm-offset-1 col-sm-10 wow fadeInUp" data-wow-delay="0.3s">
-							<i class="fa fa-quote-left"></i>
+							<svg class="testimonial-icon" viewBox="0 0 448 512" aria-hidden="true" focusable="false">
+								<path
+									d="M0 216C0 149.7 53.7 96 120 96l8 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-8 0c-30.9 0-56 25.1-56 56l0 8 64 0c35.3 0 64 28.7 64 64l0 64c0 35.3-28.7 64-64 64l-64 0c-35.3 0-64-28.7-64-64l0-32 0-32 0-72zm256 0c0-66.3 53.7-120 120-120l8 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-8 0c-30.9 0-56 25.1-56 56l0 8 64 0c35.3 0 64 28.7 64 64l0 64c0 35.3-28.7 64-64 64l-64 0c-35.3 0-64-28.7-64-64l0-32 0-32 0-72z"
+								/>
+							</svg>
 							<h3>S'adapter à vos objectifs, vos capacités et vos besoins.</h3>
 							<!-- prettier-ignore -->
 							<h4>
@@ -411,7 +435,11 @@
 						</div>
 
 						<div class="item col-md-offset-2 col-md-8 col-sm-offset-1 col-sm-10 wow fadeInUp" data-wow-delay="0.4s">
-							<i class="fa fa-quote-left"></i>
+							<svg class="testimonial-icon" viewBox="0 0 448 512" aria-hidden="true" focusable="false">
+								<path
+									d="M0 216C0 149.7 53.7 96 120 96l8 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-8 0c-30.9 0-56 25.1-56 56l0 8 64 0c35.3 0 64 28.7 64 64l0 64c0 35.3-28.7 64-64 64l-64 0c-35.3 0-64-28.7-64-64l0-32 0-32 0-72zm256 0c0-66.3 53.7-120 120-120l8 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-8 0c-30.9 0-56 25.1-56 56l0 8 64 0c35.3 0 64 28.7 64 64l0 64c0 35.3-28.7 64-64 64l-64 0c-35.3 0-64-28.7-64-64l0-32 0-32 0-72z"
+								/>
+							</svg>
 							<h3>Parce que la réalité de la rue ne s'invente pas.</h3>
 							<!-- prettier-ignore -->
 							<h4>
@@ -443,12 +471,12 @@
 					<div class="wow fadeInUp col-md-5 col-sm-4" data-wow-delay="0.4s">
 						<h2>Contact</h2>
 						<div>
-							<h5>E-mail</h5>
-							<h4><a href="mailto:contact_sd_wukff@yahoo.com">contact_sd_wukff@yahoo.com</a></h4>
+							<p class="contact-label">E-mail</p>
+							<p class="contact-value"><a href="mailto:contact_sd_wukff@yahoo.com">contact_sd_wukff@yahoo.com</a></p>
 						</div>
 						<div>
-							<h5>Téléphone</h5>
-							<h4>06 58 34 78 07</h4>
+							<p class="contact-label">Téléphone</p>
+							<p class="contact-value">06 58 34 78 07</p>
 						</div>
 					</div>
 
@@ -459,18 +487,40 @@
 								<a
 									href="https://www.facebook.com/profile.php?id=100083067502132"
 									target="_blank"
-									class="fa fa-brands fa-facebook-f"
-								></a>
+									aria-label="Facebook de la S.D.C.S"
+								>
+									<svg viewBox="0 0 320 512" aria-hidden="true" focusable="false">
+										<path
+											d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"
+										/>
+									</svg>
+								</a>
 							</li>
 							<li>
 								<a
 									href="https://www.tiktok.com/@selfdefensesdcs?_t=8WurxEyq8U2&_r=1"
 									target="_blank"
-									class="fa fa-brands fa-tiktok"
-								></a>
+									aria-label="TikTok de la S.D.C.S"
+								>
+									<svg viewBox="0 0 448 512" aria-hidden="true" focusable="false">
+										<path
+											d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"
+										/>
+									</svg>
+								</a>
 							</li>
 							<li>
-								<a href="https://www.instagram.com/selfdefcslg17/" target="_blank" class="fa fa-brands fa-instagram"></a>
+								<a
+									href="https://www.instagram.com/selfdefcslg17/"
+									target="_blank"
+									aria-label="Instagram de la S.D.C.S"
+								>
+									<svg viewBox="0 0 448 512" aria-hidden="true" focusable="false">
+										<path
+											d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+										/>
+									</svg>
+								</a>
 							</li>
 						</ul>
 					</div>
@@ -506,5 +556,33 @@
 
 		<!-- Script principal, toujours en dernier -->
 		<script src="js/custom.js"></script>
+		<script>
+			(function () {
+				let analyticsLoaded = false;
+
+				function loadAnalytics() {
+					if (analyticsLoaded) return;
+					analyticsLoaded = true;
+					window.dataLayer = window.dataLayer || [];
+					window.gtag = function () {
+						window.dataLayer.push(arguments);
+					};
+					window.gtag("js", new Date());
+					window.gtag("config", "G-J379F8XJM8");
+
+					const script = document.createElement("script");
+					script.async = true;
+					script.src = "https://www.googletagmanager.com/gtag/js?id=G-J379F8XJM8";
+					document.head.appendChild(script);
+				}
+
+				["pointerdown", "keydown", "scroll"].forEach(function (eventName) {
+					window.addEventListener(eventName, loadAnalytics, { once: true, passive: true });
+				});
+				window.addEventListener("load", function () {
+					window.setTimeout(loadAnalytics, 8000);
+				});
+			})();
+		</script>
 	</body>
 </html>
