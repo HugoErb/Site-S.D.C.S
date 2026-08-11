@@ -83,22 +83,17 @@ $(document).ready(function () {
       "images/home-bg-slider-img3.jpg"
     ];
   
-    const imageAlts = imagePaths.map(path => {
-      const fileName = path.split('/').pop();
-      return fileName.replace(/\.[^/.]+$/, ''); // supprime l'extension
-    });
+    const imageAlts = [
+      "Salle d'entraînement équipée pour les sports de combat",
+      "Formation aux gestes de premiers secours sur un mannequin",
+      "Participants à une séance de préparation physique"
+    ];
   
-    $('#home').backstretch(imagePaths, {
+    $('#home').on('backstretch.after', function (event, instance, index) {
+      $(this).find('.backstretch img').attr('alt', imageAlts[index]);
+    }).backstretch(imagePaths, {
       duration: 5000,
-      fade: 750,
-      before: function (index, $img) {
-        // Si une image est déjà dans le DOM, modifie son alt
-        $(".backstretch img").attr("alt", imageAlts[index]);
-      },
-      after: function () {
-        // S'assurer que l'alt est bien appliqué à la première image
-        $(".backstretch img").attr("alt", imageAlts[0]);
-      }
+      fade: 750
     });
   });
 
